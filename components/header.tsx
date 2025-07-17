@@ -28,14 +28,14 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <Link
             href="/"
-            className="text-xl font-bold text-brand-dark hover:text-brand-primary transition-colors duration-200"
+            className="text-xl font-bold gradient-text text-shimmer magnetic-hover"
           >
             Surya Alamsyah
           </Link>
@@ -46,10 +46,10 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative text-brand-gray hover:text-brand-primary transition-colors duration-200 font-medium text-sm tracking-wide group py-2"
+                className="relative text-brand-gray hover:text-transparent hover:bg-gradient-to-r hover:from-gradient-blue-start hover:to-gradient-purple-end hover:bg-clip-text font-medium text-sm tracking-wide group py-2 slide-up-on-hover"
               >
                 {item.label}
-                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-brand-primary transition-all duration-200 group-hover:w-full"></span>
+                <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-gradient-to-r from-gradient-blue-start to-gradient-purple-end transition-all duration-300 group-hover:w-full"></span>
               </Link>
             ))}
           </nav>

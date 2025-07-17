@@ -30,11 +30,11 @@ export function About() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section ref={sectionRef} id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-purple-50/20 to-pink-50/20">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">About Me</h2>
-          <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">About Me</h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-gradient-pink-start to-gradient-purple-end mx-auto rounded-full"></div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -77,8 +77,8 @@ export function About() {
                 { label: "Status", value: "Active Student" },
                 { label: "Focus", value: "Software Development" },
               ].map((stat, index) => (
-                <div key={index} className="p-5 bg-brand-light rounded-lg border border-brand-border card-shadow">
-                  <h4 className="font-semibold text-brand-primary text-sm mb-2">{stat.label}</h4>
+                <div key={index} className="p-5 bg-white/80 backdrop-blur-sm rounded-xl border border-white/30 card-shadow-gradient card-interactive tilt-hover">
+                  <h4 className="font-semibold gradient-text text-shimmer text-sm mb-2">{stat.label}</h4>
                   <p className="text-brand-dark text-base font-medium">{stat.value}</p>
                 </div>
               ))}

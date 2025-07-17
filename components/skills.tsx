@@ -36,29 +36,29 @@ export function Skills() {
       title: "Frontend Development",
       icon: Code,
       skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js", "HTML5", "CSS3", "JavaScript"],
-      iconColor: "text-blue-600",
-      bgColor: "bg-blue-50",
+      iconColor: "text-white",
+      bgGradient: "gradient-blue",
     },
     {
       title: "Backend Development",
       icon: Server,
       skills: ["Node.js", "Python", "Express.js", "PostgreSQL", "MongoDB", "REST APIs", "GraphQL", "Docker"],
-      iconColor: "text-green-600",
-      bgColor: "bg-green-50",
+      iconColor: "text-white",
+      bgGradient: "gradient-purple",
     },
     {
       title: "UI/UX Design",
       icon: Palette,
       skills: ["Figma", "Adobe XD", "Sketch", "Prototyping", "User Research", "Wireframing", "Design Systems"],
-      iconColor: "text-purple-600",
-      bgColor: "bg-purple-50",
+      iconColor: "text-white",
+      bgGradient: "gradient-pink",
     },
     {
       title: "Mobile Development",
       icon: Smartphone,
       skills: ["React Native", "Flutter", "iOS", "Android", "Mobile UI", "App Store", "Play Store"],
-      iconColor: "text-orange-600",
-      bgColor: "bg-orange-50",
+      iconColor: "text-white",
+      bgGradient: "gradient-orange",
     },
   ]
 
@@ -66,8 +66,8 @@ export function Skills() {
     <section ref={sectionRef} id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-light">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Skills & Technologies</h2>
-          <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Skills & Technologies</h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-gradient-blue-start to-gradient-purple-end mx-auto rounded-full"></div>
           <p className="text-brand-gray mt-4 max-w-2xl mx-auto leading-relaxed">
             A comprehensive overview of my technical skills and the technologies I work with.
           </p>
@@ -77,14 +77,14 @@ export function Skills() {
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className={`card-shadow rounded-lg border-none card-hover-effect ${
-                isVisible ? "animate-fadeInUp" : "opacity-0"
+              className={`card-shadow-gradient rounded-xl border border-white/20 bg-white/90 backdrop-blur-sm card-interactive magnetic-hover ${
+                isVisible ? "animate-flipInX" : "opacity-0"
               }`}
               style={{ animationDelay: `${0.1 * index + 0.2}s` }}
             >
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center gap-3 text-brand-dark font-semibold text-lg">
-                  <div className={`p-3 rounded-full ${category.bgColor}`}>
+                  <div className={`p-3 rounded-full ${category.bgGradient} shadow-lg scale-on-hover heartbeat-on-hover`}>
                     <category.icon className={`h-6 w-6 ${category.iconColor}`} />
                   </div>
                   {category.title}
@@ -96,7 +96,7 @@ export function Skills() {
                     <Badge
                       key={skillIndex}
                       variant="secondary"
-                      className="bg-white border border-brand-border text-brand-gray hover:bg-gray-50 transition-colors duration-200 font-medium text-sm px-3 py-1 rounded-full"
+                      className="bg-white border border-brand-border text-brand-gray hover:bg-gray-50 font-medium text-sm px-3 py-1 rounded-full interactive-hover glow-on-hover"
                     >
                       {skill}
                     </Badge>

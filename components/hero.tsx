@@ -35,16 +35,19 @@ export function Hero() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-12 overflow-hidden
-                 bg-gradient-to-br from-brand-light to-white section-gradient-bg"
+      className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-12 overflow-hidden section-gradient-bg"
     >
+      {/* Floating gradient orbs */}
+      <div className="absolute top-20 left-10 w-72 h-72 gradient-blue rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
+      <div className="absolute top-40 right-10 w-72 h-72 gradient-purple rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float" style={{animationDelay: "2s"}}></div>
+      <div className="absolute -bottom-8 left-20 w-72 h-72 gradient-pink rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float" style={{animationDelay: "4s"}}></div>
       <div className="container mx-auto max-w-4xl text-center z-10">
         <div className={`space-y-6 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-tight">
             <span className="block">
-              Hi, I'm <span className="text-brand-primary">Surya Alamsyah</span>
+              Hi, I'm <span className="gradient-text text-shimmer">Surya Alamsyah</span>
             </span>
-            <span className="block">Putera Pratama</span>
+            <span className="block gradient-text text-shimmer">Putera Pratama</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-brand-gray max-w-2xl mx-auto leading-relaxed">
@@ -56,7 +59,7 @@ export function Hero() {
             <Button
               variant="outline"
               size="lg"
-              className="border-brand-border text-brand-dark hover:bg-brand-light px-8 py-3 font-semibold rounded-lg shadow-sm hover:shadow-md transition-all duration-300 w-full sm:w-auto bg-transparent"
+              className="border-2 border-transparent bg-gradient-to-r from-gradient-blue-start to-gradient-blue-end text-white hover:from-gradient-purple-start hover:to-gradient-purple-end px-8 py-3 font-semibold rounded-lg shadow-lg hover:shadow-xl w-full sm:w-auto btn-interactive ripple-effect"
               asChild
             >
               <Link href="/resume.pdf" target="_blank" download>
@@ -83,7 +86,7 @@ export function Hero() {
               <Link
                 key={label}
                 href={href}
-                className="p-3 text-brand-gray hover:text-brand-primary transition-colors duration-200 hover:scale-110 transform rounded-full"
+                className="p-3 text-brand-gray hover:text-white rounded-full bg-white/10 backdrop-blur-sm hover:bg-gradient-to-r hover:from-gradient-blue-start hover:to-gradient-blue-end shadow-lg hover:shadow-xl icon-interactive magnetic-hover"
                 aria-label={label}
                 target="_blank" // Open in new tab
                 rel="noopener noreferrer" // Security best practice for target="_blank"

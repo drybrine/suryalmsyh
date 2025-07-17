@@ -27,7 +27,7 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-brand-dark text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
@@ -41,7 +41,7 @@ export function Footer() {
                 <Link
                   key={label}
                   href={href}
-                  className="p-2 text-gray-400 hover:text-white transition-colors duration-200 hover:scale-110 transform rounded-full"
+                  className="p-2 text-gray-400 hover:text-white rounded-full icon-interactive bounce-on-hover"
                   aria-label={label}
                   target="_blank" // Open in new tab
                   rel="noopener noreferrer" // Security best practice for target="_blank"
@@ -86,7 +86,7 @@ export function Footer() {
       {showScrollTop && (
         <Button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 p-3 rounded-full bg-brand-primary hover:bg-blue-700 shadow-lg z-50 transition-all duration-300 hover:scale-110"
+          className="fixed bottom-8 right-8 p-3 rounded-full bg-gradient-to-r from-gradient-blue-start to-gradient-purple-end hover:from-gradient-purple-start hover:to-gradient-pink-end shadow-xl z-50 magnetic-hover heartbeat-on-hover ripple-effect"
           size="icon"
           aria-label="Scroll to top"
         >

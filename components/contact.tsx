@@ -84,11 +84,11 @@ export function Contact() {
   ]
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section ref={sectionRef} id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Get In Touch</h2>
-          <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Get In Touch</h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-gradient-blue-start to-gradient-purple-end mx-auto rounded-full"></div>
           <p className="text-brand-gray mt-4 max-w-2xl mx-auto leading-relaxed">
             I'm always open to discussing new opportunities and interesting projects.
           </p>
@@ -112,7 +112,7 @@ export function Contact() {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 rounded-lg border border-brand-border hover:border-brand-primary/20 transition-colors duration-200 card-shadow group"
+                  className="flex items-center gap-4 p-4 rounded-lg border border-brand-border hover:border-brand-primary/20 card-shadow group interactive-hover magnetic-hover"
                 >
                   <div
                     className={`flex items-center justify-center w-12 h-12 ${info.bgColor} rounded-full flex-shrink-0 group-hover:scale-105 transition-transform`}
@@ -203,7 +203,7 @@ export function Contact() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-brand-primary hover:bg-blue-700 text-white font-semibold py-3 rounded-md shadow-md hover:shadow-lg transition-all duration-300"
+                  className="w-full bg-gradient-to-r from-gradient-blue-start to-gradient-blue-end hover:from-gradient-purple-start hover:to-gradient-purple-end text-white font-semibold py-3 rounded-lg shadow-lg hover:shadow-xl btn-interactive ripple-effect"
                 >
                   <Send className="mr-2 h-4 w-4" />
                   Send Message

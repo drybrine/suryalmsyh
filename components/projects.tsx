@@ -73,11 +73,11 @@ export function Projects() {
   ]
 
   return (
-    <section ref={sectionRef} id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section ref={sectionRef} id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Featured Projects</h2>
-          <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Featured Projects</h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-gradient-blue-start to-gradient-purple-end mx-auto rounded-full"></div>
           <p className="text-brand-gray mt-4 max-w-2xl mx-auto leading-relaxed">
             A selection of projects that demonstrate my technical skills and problem-solving abilities.
           </p>
@@ -87,8 +87,8 @@ export function Projects() {
           {projects.map((project, index) => (
             <Card
               key={index}
-              className={`overflow-hidden card-shadow rounded-lg border-none h-full flex flex-col card-hover-effect ${
-                isVisible ? "animate-fadeInUp" : "opacity-0"
+              className={`overflow-hidden card-shadow-gradient rounded-xl border border-white/20 h-full flex flex-col bg-white/80 backdrop-blur-sm card-interactive tilt-hover ${
+                isVisible ? "animate-zoomIn" : "opacity-0"
               }`}
               style={{ animationDelay: `${0.1 * index + 0.2}s` }}
             >
@@ -96,7 +96,7 @@ export function Projects() {
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110 hover:rotate-1"
                 />
               </div>
               <CardHeader className="pb-4 flex-shrink-0">
@@ -122,7 +122,7 @@ export function Projects() {
                 <div className="flex gap-3 mt-auto">
                   <Button
                     size="sm"
-                    className="bg-brand-primary hover:bg-blue-700 text-white flex-1 rounded-md shadow-sm hover:shadow-md transition-all duration-300"
+                    className="bg-gradient-to-r from-gradient-blue-start to-gradient-blue-end hover:from-gradient-purple-start hover:to-gradient-purple-end text-white flex-1 rounded-lg shadow-lg hover:shadow-xl btn-interactive bounce-on-hover"
                     asChild
                   >
                     <Link href={project.liveUrl} target="_blank">
@@ -133,7 +133,7 @@ export function Projects() {
                   <Button
                     variant="outline"
                     size="sm"
-                    className="border-brand-border text-brand-dark hover:bg-brand-light bg-transparent flex-1 rounded-md shadow-sm hover:shadow-md transition-all duration-300"
+                    className="border-2 border-gradient-blue-start/30 text-brand-dark hover:bg-gradient-to-r hover:from-gradient-blue-start hover:to-gradient-blue-end hover:text-white bg-transparent flex-1 rounded-lg shadow-lg hover:shadow-xl btn-interactive wiggle-on-hover"
                     asChild
                   >
                     <Link href={project.githubUrl} target="_blank">

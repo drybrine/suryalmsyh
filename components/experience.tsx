@@ -74,8 +74,8 @@ export function Experience() {
     <section ref={sectionRef} id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-light">
       <div className="container mx-auto max-w-4xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
-          <h2 className="text-3xl sm:text-4xl font-bold text-brand-dark mb-4">Experience & Education</h2>
-          <div className="w-20 h-1.5 bg-brand-primary mx-auto rounded-full"></div>
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Experience & Education</h2>
+          <div className="w-20 h-1.5 bg-gradient-to-r from-gradient-purple-start to-gradient-pink-end mx-auto rounded-full"></div>
           <p className="text-brand-gray mt-4 max-w-2xl mx-auto leading-relaxed">
             My academic journey and learning experiences in computer science and software development.
           </p>
@@ -85,7 +85,7 @@ export function Experience() {
           {experiences.map((exp, index) => (
             <Card
               key={index}
-              className={`card-shadow rounded-lg border-none card-hover-effect ${
+              className={`card-shadow-gradient rounded-xl border border-white/20 hover-glow bg-white/90 backdrop-blur-sm ${
                 isVisible ? "animate-fadeInUp" : "opacity-0"
               }`}
               style={{ animationDelay: `${0.1 * index + 0.2}s` }}
