@@ -30,14 +30,14 @@ export function About() {
   }, [])
 
   return (
-    <section ref={sectionRef} id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-purple-50/20 to-pink-50/20">
+    <section ref={sectionRef} id="about" className="py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-br from-white via-purple-50/20 to-pink-50/20">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
           <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">About Me</h2>
           <div className="w-20 h-1.5 bg-gradient-to-r from-gradient-pink-start to-gradient-purple-end mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           <div
             className={`card-shadow rounded-lg overflow-hidden lg:max-w-sm lg:mx-auto ${isVisible ? "animate-slideInLeft" : "opacity-0"}`}
             style={{ animationDelay: "0.2s" }}

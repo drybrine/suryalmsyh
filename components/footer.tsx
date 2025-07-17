@@ -27,12 +27,12 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white py-12 px-6 sm:px-8 lg:px-12">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4">
             <h3 className="text-xl font-bold text-white">Surya Alamsyah Putera Pratama</h3>
-            <p className="text-gray-400 leading-relaxed text-sm">
+            <p className="text-gray-300 leading-relaxed text-sm">
               Computer Science student passionate about creating innovative digital solutions and learning new
               technologies.
             </p>
@@ -41,7 +41,7 @@ export function Footer() {
                 <Link
                   key={label}
                   href={href}
-                  className="p-2 text-gray-400 hover:text-white rounded-full icon-interactive bounce-on-hover"
+                  className="p-2 text-gray-300 hover:text-white rounded-full icon-interactive bounce-on-hover"
                   aria-label={label}
                   target="_blank" // Open in new tab
                   rel="noopener noreferrer" // Security best practice for target="_blank"
@@ -59,7 +59,7 @@ export function Footer() {
                 <Link
                   key={item}
                   href={`/${item.toLowerCase()}`}
-                  className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
+                  className="block text-gray-300 hover:text-white transition-colors duration-200 text-sm"
                 >
                   {item}
                 </Link>
@@ -69,7 +69,7 @@ export function Footer() {
 
           <div>
             <h4 className="font-semibold text-white mb-4">Contact Information</h4>
-            <div className="space-y-2 text-gray-400 text-sm">
+            <div className="space-y-2 text-gray-300 text-sm">
               <p>Bandung, Indonesia</p>
               <p>aasurya.app@gmail.com</p>
               <p>+6285156081438</p>
@@ -78,7 +78,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-500 text-sm">© 2025 Surya Alamsyah Putera Pratama. All rights reserved.</p>
+          <p className="text-gray-300 text-sm">&copy; 2025 Surya Alamsyah Putera Pratama. All rights reserved.</p>
         </div>
       </div>
 

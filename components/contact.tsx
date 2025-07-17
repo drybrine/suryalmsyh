@@ -84,7 +84,7 @@ export function Contact() {
   ]
 
   return (
-    <section ref={sectionRef} id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20">
+    <section ref={sectionRef} id="contact" className="py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-br from-white via-blue-50/20 to-purple-50/20">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
           <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Get In Touch</h2>

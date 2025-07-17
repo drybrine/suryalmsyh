@@ -73,7 +73,7 @@ export function Projects() {
   ]
 
   return (
-    <section ref={sectionRef} id="projects" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30">
+    <section ref={sectionRef} id="projects" className="py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-gradient-to-br from-white via-blue-50/30 to-purple-50/30">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
           <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Featured Projects</h2>
@@ -83,7 +83,7 @@ export function Projects() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <Card
               key={index}

@@ -63,7 +63,7 @@ export function Skills() {
   ]
 
   return (
-    <section ref={sectionRef} id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-light">
+    <section ref={sectionRef} id="skills" className="py-16 sm:py-20 px-6 sm:px-8 lg:px-12 bg-brand-light">
       <div className="container mx-auto max-w-6xl">
         <div className={`text-center mb-16 ${isVisible ? "animate-fadeInUp" : "opacity-0"}`}>
           <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">Skills & Technologies</h2>
@@ -73,7 +73,7 @@ export function Skills() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {skillCategories.map((category, index) => (
             <Card
               key={index}
